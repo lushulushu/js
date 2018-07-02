@@ -6,6 +6,8 @@ import { HashRouter, Switch, Route, Link, withRouter } from 'react-router-dom'
 
 import Home from './home'
 
+import '../styles/app.css'
+
 const mapStateToProps = state => {
   return {
   }

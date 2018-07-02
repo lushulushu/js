@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import { Button } from 'antd';
 
 const mapStateToProps = state => {
   return {
@@ -22,9 +23,12 @@ class Home extends React.Component {
   render() {
     return (
       <div id='home'>
-        <p>
-          "hello there"
-        </p>
+        <div>
+          <Button type="primary">Primary</Button>
+          <Button>Default</Button>
+          <Button type="dashed">Dashed</Button>
+          <Button type="danger">Danger</Button>
+        </div>
       </div>);
   }
 }

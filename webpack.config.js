@@ -19,12 +19,12 @@ module.exports = {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react', 'stage-2']
+          presets: ['env', 'react', 'stage-2']
         }
       },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react', 'stage-2']
+          presets: ['env', 'react', 'stage-2']
         }
       },
       {
@@ -35,7 +35,7 @@ module.exports = {
       { test: /\.(ttf|otf)$/, loader: 'url-loader?limit=50000&name=assets/[name].[ext]',
         exclude: /node_modules/},
 
-      { test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/ }
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ], exclude: /node_modules/ }
     ]
   }
 };
